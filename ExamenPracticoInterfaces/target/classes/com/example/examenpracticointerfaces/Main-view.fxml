@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="573.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examenpracticointerfaces.MainController">
+   <top>
+      <VBox prefHeight="77.0" prefWidth="918.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+            <TextField fx:id="textoTitulo" alignment="CENTER" editable="false" focusTraversable="false" text="Gestor de dietética">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textoSubtitulo" alignment="CENTER" editable="false" focusTraversable="false" text="Creado por Arturo Guzmán Lucena" />
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <AnchorPane prefHeight="455.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <TableView fx:id="tablaView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tablaNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="tablaSexo" prefWidth="75.0" text="Sexo" />
+            <TableColumn fx:id="tablaEdad" prefWidth="75.0" text="Edad" />
+            <TableColumn fx:id="tablaPeso" prefWidth="75.0" text="Peso" />
+            <TableColumn fx:id="tablaAltura" prefWidth="75.0" text="Altura" />
+            <TableColumn fx:id="tablaActi" prefWidth="75.0" text="Actividad" />
+            <TableColumn fx:id="tablaGER" prefWidth="75.0" text="GER" />
+            <TableColumn fx:id="tablaGET" prefWidth="75.0" text="GET" />
+        </columns>
+      </TableView>
+   </center>
+   <left>
+      <GridPane prefHeight="478.0" prefWidth="245.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane layoutX="10.0" layoutY="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.60000610351562" minWidth="10.0" prefWidth="71.39999008178711" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.60000610351562" minWidth="10.0" prefWidth="173.80000991821288" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Edad" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Peso" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Altura" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Actividad" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <TextField fx:id="rellenarNombre" prefHeight="26.0" prefWidth="155.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="rellenarSexo" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <Spinner fx:id="rellenarEdad" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Spinner fx:id="rellenarPeso" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Spinner fx:id="rellenarAltura" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ChoiceBox fx:id="rellenarActividad" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonOnAction" text="Añadir a la tabla" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="25.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </GridPane>
+   </left>
+   <bottom>
+      <TextField fx:id="textoBordeInferior" alignment="CENTER" text="Información del programa" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
